@@ -21,7 +21,7 @@ const officials: Official[] = [
     phone: "+254745730449",
     whatsapp: "254745730449",
     initials: "BW",
-    description: "Leadership and organizational guidance"
+    description: "-"
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const officials: Official[] = [
     phone: "+254751161828",
     whatsapp: "254751161828",
     initials: "NO",
-    description: "Administrative support and communication"
+    description: "-"
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ const officials: Official[] = [
     phone: "+254768202589",
     whatsapp: "254768202589",
     initials: "BN",
-    description: "Community support and member assistance"
+    description: "-"
   },
   {
     id: 4,
@@ -48,7 +48,7 @@ const officials: Official[] = [
     phone: "+254796693660",
     whatsapp: "254796693660",
     initials: "BC",
-    description: "Member support and community outreach"
+    description: "-"
   },
   {
     id: 5,
@@ -57,7 +57,7 @@ const officials: Official[] = [
     phone: "+254794936760",
     whatsapp: "254794936760",
     initials: "KN",
-    description: "Student welfare and assistance"
+    description: "-"
   }
 ];
 

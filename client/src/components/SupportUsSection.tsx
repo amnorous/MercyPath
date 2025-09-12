@@ -4,20 +4,19 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { CreditCard, Smartphone, Copy, CheckCircle, Loader2, MapPin } from "lucide-react";
+import { CreditCard, Smartphone, Copy, CheckCircle, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 export default function SupportUsSection() {
   const [amount, setAmount] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [isProcessing, setIsProcessing] = useState(false);
   const [copiedField, setCopiedField] = useState<string | null>(null);
   const { toast } = useToast();
 
   const paybillDetails = {
     paybillNumber: "4109183",
     accountNumber: "COMPASSION",
-    businessName: "Medical Students Christian Union (MSCU)"
+    businessName: "UON MEDICAL SCHOOL CHRISTIAN UNION"
   };
 
   const copyToClipboard = async (text: string, field: string) => {
@@ -38,7 +37,7 @@ export default function SupportUsSection() {
     }
   };
 
-  const handleMpesaPayment = async () => {
+  const handleMpesaPayment = () => {
     if (!amount || !phoneNumber) {
       toast({
         title: "Missing Information",
@@ -57,19 +56,13 @@ export default function SupportUsSection() {
       return;
     }
 
-    setIsProcessing(true);
-    
-    // Simulate M-Pesa STK push
-    setTimeout(() => {
-      setIsProcessing(false);
-      toast({
-        title: "Payment Request Sent",
-        description: "Please check your phone and enter your M-Pesa PIN to complete the payment",
-      });
-      // Reset form
-      setAmount("");
-      setPhoneNumber("");
-    }, 2000);
+    toast({
+      title: "Coming Soon!",
+      description: "M-Pesa push payments will be available shortly. Please use manual Paybill for now.",
+    });
+
+    setAmount("");
+    setPhoneNumber("");
   };
 
   return (
@@ -90,20 +83,31 @@ export default function SupportUsSection() {
 
         <Card className="bg-card shadow-lg card-hover">
           <CardHeader>
-            <CardTitle className="text-2xl text-center text-foreground">Choose Your Payment Method</CardTitle>
+            <CardTitle className="text-2xl text-center text-foreground">
+              Choose Your Payment Method
+            </CardTitle>
           </CardHeader>
           <CardContent>
             <Tabs defaultValue="paybill" className="w-full">
               <TabsList className="grid w-full grid-cols-2">
-                <TabsTrigger value="paybill" data-testid="tab-paybill">Paybill Details</TabsTrigger>
-                <TabsTrigger value="mpesa" data-testid="tab-mpesa">M-Pesa Push</TabsTrigger>
+                <TabsTrigger value="paybill" data-testid="tab-paybill">
+                  Paybill Details
+                </TabsTrigger>
+                <TabsTrigger value="mpesa" data-testid="tab-mpesa">
+                  M-Pesa Push
+                </TabsTrigger>
               </TabsList>
 
+              {/* --- MANUAL PAYMENT SECTION (UNCHANGED) --- */}
               <TabsContent value="paybill" className="space-y-6 mt-6">
                 <div className="text-center mb-6">
                   <CreditCard className="w-12 h-12 text-chart-2 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Manual M-Pesa Payment</h3>
-                  <p className="text-muted-foreground">Use these details to send money via M-Pesa</p>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">
+                    Manual M-Pesa Payment
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Use these details to send money via M-Pesa
+                  </p>
                 </div>
 
                 <div className="bg-blue-50 dark:bg-blue-950/20 rounded-lg p-4 mb-6">
@@ -112,7 +116,8 @@ export default function SupportUsSection() {
                     Physical Contributions
                   </h4>
                   <p className="text-muted-foreground text-sm">
-                    <strong>Location:</strong> Medical Students Christian Union Office<br/>
+                    <strong>Location:</strong><br/> At Chiromo drop off is at the Anatomy Laboratory<br />
+                    At KNH the drop off is at Bancy's<br />
                     <em>Please contact us for specific drop-off details and times</em>
                   </p>
                 </div>
@@ -121,8 +126,12 @@ export default function SupportUsSection() {
                   <div className="bg-muted/50 rounded-lg p-6 space-y-4">
                     <div className="flex items-center justify-between">
                       <div>
-                        <Label className="text-sm font-medium text-muted-foreground">Paybill Number</Label>
-                        <p className="text-2xl font-bold text-foreground" data-testid="text-paybill-number">{paybillDetails.paybillNumber}</p>
+                        <Label className="text-sm font-medium text-muted-foreground">
+                          Paybill Number
+                        </Label>
+                        <p className="text-2xl font-bold text-foreground" data-testid="text-paybill-number">
+                          {paybillDetails.paybillNumber}
+                        </p>
                       </div>
                       <Button
                         variant="outline"
@@ -140,8 +149,12 @@ export default function SupportUsSection() {
 
                     <div className="flex items-center justify-between">
                       <div>
-                        <Label className="text-sm font-medium text-muted-foreground">Account Number</Label>
-                        <p className="text-xl font-semibold text-foreground" data-testid="text-account-number">{paybillDetails.accountNumber}</p>
+                        <Label className="text-sm font-medium text-muted-foreground">
+                          Account Number
+                        </Label>
+                        <p className="text-xl font-semibold text-foreground" data-testid="text-account-number">
+                          {paybillDetails.accountNumber}
+                        </p>
                       </div>
                       <Button
                         variant="outline"
@@ -158,8 +171,12 @@ export default function SupportUsSection() {
                     </div>
 
                     <div>
-                      <Label className="text-sm font-medium text-muted-foreground">Business Name</Label>
-                      <p className="text-lg font-medium text-foreground" data-testid="text-business-name">{paybillDetails.businessName}</p>
+                      <Label className="text-sm font-medium text-muted-foreground">
+                        Business Name
+                      </Label>
+                      <p className="text-lg font-medium text-foreground" data-testid="text-business-name">
+                        {paybillDetails.businessName}
+                      </p>
                     </div>
                   </div>
 
@@ -168,25 +185,32 @@ export default function SupportUsSection() {
                     <ol className="list-decimal list-inside space-y-1 text-muted-foreground text-sm">
                       <li>Go to M-Pesa on your phone</li>
                       <li>Select "Lipa na M-Pesa" then "Pay Bill"</li>
-                      <li>Enter Paybill Number: {paybillDetails.paybillNumber}</li>
+                      <li>Enter Business Number: {paybillDetails.paybillNumber}</li>
                       <li>Enter Account Number: {paybillDetails.accountNumber}</li>
-                      <li>Enter the amount you wish to donate</li>
+                      <li>Enter the amount you wish to contribute</li>
                       <li>Enter your M-Pesa PIN to complete</li>
                     </ol>
                   </div>
                 </div>
               </TabsContent>
 
+              {/* --- MPESA PUSH SECTION WITH "COMING SOON" POPUP --- */}
               <TabsContent value="mpesa" className="space-y-6 mt-6">
                 <div className="text-center mb-6">
                   <Smartphone className="w-12 h-12 text-chart-2 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-foreground mb-2">Quick M-Pesa Payment</h3>
-                  <p className="text-muted-foreground">Enter your details for an instant payment request</p>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">
+                    Quick M-Pesa Payment
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Enter your details to receive an instant M-Pesa STK push
+                  </p>
                 </div>
 
                 <div className="space-y-4">
                   <div>
-                    <Label htmlFor="amount" className="text-base font-medium">Amount (KES)</Label>
+                    <Label htmlFor="amount" className="text-base font-medium">
+                      Amount (KES)
+                    </Label>
                     <Input
                       id="amount"
                       type="number"
@@ -194,12 +218,13 @@ export default function SupportUsSection() {
                       value={amount}
                       onChange={(e) => setAmount(e.target.value)}
                       className="text-lg py-3"
-                      data-testid="input-amount"
                     />
                   </div>
 
                   <div>
-                    <Label htmlFor="phone" className="text-base font-medium">Phone Number</Label>
+                    <Label htmlFor="phone" className="text-base font-medium">
+                      Phone Number
+                    </Label>
                     <Input
                       id="phone"
                       type="tel"
@@ -207,7 +232,6 @@ export default function SupportUsSection() {
                       value={phoneNumber}
                       onChange={(e) => setPhoneNumber(e.target.value)}
                       className="text-lg py-3"
-                      data-testid="input-phone"
                     />
                     <p className="text-sm text-muted-foreground mt-1">
                       Enter your phone number starting with 254
@@ -216,29 +240,11 @@ export default function SupportUsSection() {
 
                   <Button
                     onClick={handleMpesaPayment}
-                    disabled={isProcessing || !amount || !phoneNumber}
                     className="w-full bg-primary hover:bg-chart-2 text-white text-lg py-6 border border-primary hover:border-chart-2"
-                    data-testid="button-mpesa-pay"
                   >
-                    {isProcessing ? (
-                      <>
-                        <Loader2 className="w-5 h-5 mr-2 animate-spin" />
-                        Processing...
-                      </>
-                    ) : (
-                      <>
-                        <Smartphone className="w-5 h-5 mr-2" />
-                        Send Payment Request
-                      </>
-                    )}
+                    <Smartphone className="w-5 h-5 mr-2" />
+                    Send Payment Request
                   </Button>
-
-                  <div className="bg-blue-50 dark:bg-blue-950/20 rounded-lg p-4">
-                    <p className="text-sm text-blue-800 dark:text-blue-200">
-                      <strong>Note:</strong> You will receive an M-Pesa prompt on your phone. 
-                      Enter your M-Pesa PIN to complete the transaction.
-                    </p>
-                  </div>
                 </div>
               </TabsContent>
             </Tabs>

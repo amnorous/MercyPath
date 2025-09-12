@@ -36,7 +36,7 @@ export default function ThemeToggle() {
       onClick={toggleTheme}
       variant="ghost"
       size="icon"
-      className="fixed top-4 right-4 z-50 bg-chart-2 border-2 border-white shadow-lg hover:bg-chart-2/90 rounded-full"
+      className="fixed top--1 right--6 z-50 bg-chart-2 border-2 border-white shadow-lg hover:bg-chart-2/90 rounded-full"
       data-testid="button-theme-toggle"
     >
       {theme === 'light' ? (

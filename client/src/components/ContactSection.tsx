@@ -13,7 +13,7 @@ export default function ContactSection() {
     {
       icon: MapPin,
       label: "Location",
-      value: "PR23+VRH Nairobi (-1.2978120, 36.8046173)",
+      value: "UON MEDICAL SCHOOL CHRISTIAN UNION",
       action: () => window.open("https://maps.google.com/?q=-1.2978120,36.8046173", '_blank')
     },
     {
@@ -97,15 +97,22 @@ export default function ContactSection() {
         {/* Footer */}
         <div className="text-center mt-12 pt-8 border-t border-border">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <Heart className="w-5 h-5 text-chart-2" />
+            <Heart className="w-0 h-0 text-chart-2" />
             <span className="text-lg font-semibold text-foreground">Medical Students Christian Union (MSCU)</span>
           </div>
           <p className="text-muted-foreground">
             We Are Family
           </p>
           <p className="text-sm text-muted-foreground mt-2">
-            Compassion Week: September 8-14, 2024
+            © ICT Team, Norys Ndachule 2025 —  
+            <a 
+              href="mailto:noryswanjala@gmail.com" 
+              className="text-primary hover:underline"
+            >
+               Norys Ndachule
+            </a>
           </p>
+
         </div>
       </div>
     </section>
