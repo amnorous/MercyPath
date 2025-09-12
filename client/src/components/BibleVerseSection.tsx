@@ -26,7 +26,7 @@ export default function BibleVerseSection() {
     <section id="bible-verses" className="py-16 bg-gradient-to-br from-background to-muted/30">
       <div className="container mx-auto px-6 max-w-4xl">
         <div className="text-center space-y-4 mb-12">
-          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
+          <div className="inline-flex items-center gap-2 bg-chart-2/20 text-chart-2 px-4 py-2 rounded-full text-sm font-medium border border-chart-2/30">
             <BookOpen className="w-4 h-4" />
             Daily Inspiration
           </div>
@@ -39,20 +39,20 @@ export default function BibleVerseSection() {
         </div>
 
         {currentVerse && (
-          <Card className="bg-card border-2 border-primary/20 shadow-lg card-hover animate-floating">
+          <Card className="bg-card border-2 border-chart-2/30 shadow-lg card-hover animate-floating">
             <CardContent className="p-8 md:p-12 text-center space-y-6">
               <div className={`transition-all duration-500 ${isLoading ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
                 <blockquote className="text-xl md:text-2xl font-serif text-foreground leading-relaxed mb-6 italic">
                   "{currentVerse.verse}"
                 </blockquote>
                 
-                <cite className="text-lg font-semibold text-primary not-italic">
+                <cite className="text-lg font-semibold text-chart-2 not-italic">
                   — {currentVerse.reference}
                 </cite>
                 
                 <div className="bg-muted/50 rounded-lg p-6 mt-8">
                   <div className="flex items-start gap-3">
-                    <Info className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                    <Info className="w-5 h-5 text-chart-2 mt-0.5 flex-shrink-0" />
                     <div className="text-left">
                       <h4 className="font-semibold text-foreground mb-2">Did you know?</h4>
                       <p className="text-muted-foreground leading-relaxed">
@@ -66,7 +66,7 @@ export default function BibleVerseSection() {
               <Button 
                 onClick={loadNewVerse}
                 disabled={isLoading}
-                className="mt-8 bg-primary hover:bg-primary/90 text-primary-foreground"
+                className="mt-8 bg-chart-2 hover:bg-chart-2/90 text-white"
                 data-testid="button-new-verse"
               >
                 <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />

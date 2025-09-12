@@ -28,7 +28,7 @@ export default function ContactSection() {
     <section id="contact" className="py-16 bg-gradient-to-br from-primary/5 to-chart-1/5">
       <div className="container mx-auto px-6 max-w-4xl">
         <div className="text-center space-y-4 mb-12">
-          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
+          <div className="inline-flex items-center gap-2 bg-chart-2/20 text-chart-2 px-4 py-2 rounded-full text-sm font-medium border border-chart-2/30">
             <MessageCircle className="w-4 h-4" />
             Get in Touch
           </div>
@@ -45,8 +45,8 @@ export default function ContactSection() {
           {contactInfo.map((info, index) => (
             <Card key={index} className="bg-card card-hover cursor-pointer" onClick={info.action}>
               <CardContent className="p-6 text-center space-y-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                  <info.icon className="w-6 h-6 text-primary" />
+                <div className="w-12 h-12 bg-chart-2/10 rounded-full flex items-center justify-center mx-auto">
+                  <info.icon className="w-6 h-6 text-chart-2" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1" data-testid={`text-contact-label-${index}`}>
@@ -62,11 +62,11 @@ export default function ContactSection() {
         </div>
 
         {/* Main WhatsApp CTA */}
-        <Card className="bg-gradient-to-r from-primary/5 to-chart-2/5 border-2 border-primary/20">
+        <Card className="bg-gradient-to-r from-chart-2/5 to-primary/5 border-2 border-chart-2/30">
           <CardContent className="p-8 text-center">
             <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
-                <ExternalLink className="w-8 h-8 text-primary" />
+              <div className="w-16 h-16 bg-chart-2/10 rounded-full flex items-center justify-center">
+                <ExternalLink className="w-8 h-8 text-chart-2" />
               </div>
             </div>
             <h3 className="text-2xl font-bold text-foreground mb-4">
@@ -74,7 +74,7 @@ export default function ContactSection() {
             </h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
               Discover all our resources, social media, and community links in one convenient place. 
-              Stay connected with the Medical School Christian Union community.
+              Stay connected with the Medical Students Christian Union community.
             </p>
             <Button
               onClick={() => {
@@ -82,7 +82,7 @@ export default function ContactSection() {
                 console.log('Opening MSCU Linktree');
               }}
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg"
+              className="bg-chart-2 hover:bg-chart-2/90 text-white px-8 py-4 text-lg"
               data-testid="button-linktree"
             >
               <ExternalLink className="w-5 h-5 mr-2" />
@@ -97,8 +97,8 @@ export default function ContactSection() {
         {/* Footer */}
         <div className="text-center mt-12 pt-8 border-t border-border">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <Heart className="w-5 h-5 text-primary" />
-            <span className="text-lg font-semibold text-foreground">Medical School Christian Union (MSCU)</span>
+            <Heart className="w-5 h-5 text-chart-2" />
+            <span className="text-lg font-semibold text-foreground">Medical Students Christian Union (MSCU)</span>
           </div>
           <p className="text-muted-foreground">
             We Are Family

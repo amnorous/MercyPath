@@ -17,7 +17,7 @@ export default function SupportUsSection() {
   const paybillDetails = {
     paybillNumber: "4109183",
     accountNumber: "COMPASSION",
-    businessName: "Medical School Christian Union (MSCU)"
+    businessName: "Medical Students Christian Union (MSCU)"
   };
 
   const copyToClipboard = async (text: string, field: string) => {
@@ -76,7 +76,7 @@ export default function SupportUsSection() {
     <section id="support" className="py-16 bg-muted/30">
       <div className="container mx-auto px-6 max-w-4xl">
         <div className="text-center space-y-4 mb-12">
-          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
+          <div className="inline-flex items-center gap-2 bg-chart-2/20 text-chart-2 px-4 py-2 rounded-full text-sm font-medium border border-chart-2/30">
             <CreditCard className="w-4 h-4" />
             Make a Difference
           </div>
@@ -101,7 +101,7 @@ export default function SupportUsSection() {
 
               <TabsContent value="paybill" className="space-y-6 mt-6">
                 <div className="text-center mb-6">
-                  <CreditCard className="w-12 h-12 text-primary mx-auto mb-4" />
+                  <CreditCard className="w-12 h-12 text-chart-2 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-foreground mb-2">Manual M-Pesa Payment</h3>
                   <p className="text-muted-foreground">Use these details to send money via M-Pesa</p>
                 </div>
@@ -112,7 +112,7 @@ export default function SupportUsSection() {
                     Physical Contributions
                   </h4>
                   <p className="text-muted-foreground text-sm">
-                    <strong>Location:</strong> Medical School Christian Union Office<br/>
+                    <strong>Location:</strong> Medical Students Christian Union Office<br/>
                     <em>Please contact us for specific drop-off details and times</em>
                   </p>
                 </div>
@@ -163,7 +163,7 @@ export default function SupportUsSection() {
                     </div>
                   </div>
 
-                  <div className="bg-primary/10 rounded-lg p-4">
+                  <div className="bg-chart-2/10 rounded-lg p-4 border border-chart-2/20">
                     <h4 className="font-semibold text-foreground mb-2">How to pay:</h4>
                     <ol className="list-decimal list-inside space-y-1 text-muted-foreground text-sm">
                       <li>Go to M-Pesa on your phone</li>
@@ -179,7 +179,7 @@ export default function SupportUsSection() {
 
               <TabsContent value="mpesa" className="space-y-6 mt-6">
                 <div className="text-center mb-6">
-                  <Smartphone className="w-12 h-12 text-primary mx-auto mb-4" />
+                  <Smartphone className="w-12 h-12 text-chart-2 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-foreground mb-2">Quick M-Pesa Payment</h3>
                   <p className="text-muted-foreground">Enter your details for an instant payment request</p>
                 </div>
@@ -217,7 +217,7 @@ export default function SupportUsSection() {
                   <Button
                     onClick={handleMpesaPayment}
                     disabled={isProcessing || !amount || !phoneNumber}
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground text-lg py-6"
+                    className="w-full bg-chart-2 hover:bg-chart-2/90 text-white text-lg py-6"
                     data-testid="button-mpesa-pay"
                   >
                     {isProcessing ? (

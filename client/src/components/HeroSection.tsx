@@ -32,14 +32,14 @@ export default function HeroSection({ onSupportClick, onAssistanceClick }: HeroS
           <div className="w-12 h-12 bg-chart-2 rounded-full flex items-center justify-center">
             <Heart className="w-6 h-6 text-white" />
           </div>
-          <span className="text-sm font-medium tracking-wide">MEDICAL SCHOOL CHRISTIAN UNION</span>
+          <span className="text-sm font-medium tracking-wide">MEDICAL STUDENTS CHRISTIAN UNION</span>
         </div>
         
         {/* Main Heading */}
         <div className="space-y-4">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight animate-fade-in">
             <span className="animate-pulse">COMPASSION</span>
-            <span className="block text-primary animate-bounce delay-500">WEEK</span>
+            <span className="block text-chart-2 animate-bounce delay-500">WEEK</span>
           </h1>
           <div className="bg-white rounded-full px-8 py-4 inline-block">
             <p className="text-chart-1 text-xl md:text-2xl font-semibold">
@@ -69,7 +69,7 @@ export default function HeroSection({ onSupportClick, onAssistanceClick }: HeroS
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
           <Button 
             size="lg" 
-            className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold border-2 border-primary transform transition-all duration-300 hover:scale-105 animate-slide-up"
+            className="bg-chart-2 hover:bg-chart-2/90 text-white px-8 py-4 text-lg font-semibold border-2 border-chart-2 transform transition-all duration-300 hover:scale-105 animate-slide-up"
             onClick={onSupportClick}
             data-testid="button-support"
           >

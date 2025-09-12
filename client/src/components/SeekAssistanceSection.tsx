@@ -77,7 +77,7 @@ export default function SeekAssistanceSection() {
     <section id="assistance" className="py-16 bg-background">
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="text-center space-y-4 mb-12">
-          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
+          <div className="inline-flex items-center gap-2 bg-chart-2/20 text-chart-2 px-4 py-2 rounded-full text-sm font-medium border border-chart-2/30">
             <Heart className="w-4 h-4" />
             We're Here to Help
           </div>
@@ -85,7 +85,7 @@ export default function SeekAssistanceSection() {
             Seek Assistance
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Don't face your challenges alone. Our dedicated Medical School Christian Union team is here to provide support, guidance, and assistance when you need it most.
+            Don't face your challenges alone. Our dedicated Medical Students Christian Union team is here to provide support, guidance, and assistance when you need it most.
           </p>
         </div>
 
@@ -94,14 +94,14 @@ export default function SeekAssistanceSection() {
             <Card key={official.id} className="bg-card border-2 border-border card-hover">
               <CardHeader className="text-center">
                 <Avatar className="w-20 h-20 mx-auto mb-4">
-                  <AvatarFallback className="bg-primary text-primary-foreground text-lg font-semibold">
+                  <AvatarFallback className="bg-chart-2 text-white text-lg font-semibold">
                     {official.initials}
                   </AvatarFallback>
                 </Avatar>
                 <CardTitle className="text-xl text-foreground" data-testid={`text-official-name-${official.id}`}>
                   {official.name}
                 </CardTitle>
-                <p className="text-primary font-medium" data-testid={`text-official-title-${official.id}`}>
+                <p className="text-chart-2 font-medium" data-testid={`text-official-title-${official.id}`}>
                   {official.title}
                 </p>
                 <p className="text-muted-foreground text-sm" data-testid={`text-official-description-${official.id}`}>
@@ -111,7 +111,7 @@ export default function SeekAssistanceSection() {
               <CardContent className="space-y-3">
                 <Button
                   onClick={() => handleCall(official.phone, official.name)}
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                  className="w-full bg-chart-2 hover:bg-chart-2/90 text-white"
                   data-testid={`button-call-${official.id}`}
                 >
                   <Phone className="w-4 h-4 mr-2" />
@@ -131,36 +131,6 @@ export default function SeekAssistanceSection() {
           ))}
         </div>
 
-        {/* WhatsApp Group Section */}
-        <Card className="bg-gradient-to-r from-primary/5 to-chart-1/5 border-2 border-primary/20">
-          <CardContent className="p-8 text-center">
-            <div className="flex items-center justify-center mb-6">
-              <Users className="w-12 h-12 text-primary" />
-            </div>
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Join Our Community
-            </h3>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Connect with fellow members of the Medical School Christian Union community. 
-              Share experiences, find support, and stay updated on our compassion initiatives.
-            </p>
-            <Button
-              onClick={() => {
-                window.open('https://chat.whatsapp.com/compassion-group', '_blank');
-                console.log('Opening WhatsApp group');
-              }}
-              size="lg"
-              className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 text-lg"
-              data-testid="button-whatsapp-group"
-            >
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Join WhatsApp Group
-            </Button>
-            <p className="text-sm text-muted-foreground mt-4">
-              Connect with over 200+ members of our compassionate community
-            </p>
-          </CardContent>
-        </Card>
       </div>
     </section>
   );
