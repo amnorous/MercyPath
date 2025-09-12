@@ -35,13 +35,13 @@ export default function ThemeToggle() {
       onClick={toggleTheme}
       variant="ghost"
       size="icon"
-      className="fixed top-6 right-6 z-50 bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20"
+      className="fixed top-6 right-6 z-50 bg-chart-2 border-2 border-white shadow-lg hover:bg-chart-2/90"
       data-testid="button-theme-toggle"
     >
       {theme === 'light' ? (
-        <Sun className="w-5 h-5 text-chart-2" />
+        <Sun className="w-5 h-5 text-white" />
       ) : (
-        <Moon className="w-5 h-5 text-chart-2" />
+        <Moon className="w-5 h-5 text-white" />
       )}
     </Button>
   );
