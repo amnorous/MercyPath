@@ -16,15 +16,6 @@ interface Official {
 const officials: Official[] = [
   {
     id: 1,
-    name: "Bancy Nasiro",
-    title: "Member",
-    phone: "+254768202589",
-    whatsapp: "254768202589",
-    initials: "BN",
-    description: "Community support and member assistance"
-  },
-  {
-    id: 2,
     name: "Brenda Wanyama",
     title: "Chairperson",
     phone: "+254745730449",
@@ -33,7 +24,25 @@ const officials: Official[] = [
     description: "Leadership and organizational guidance"
   },
   {
+    id: 2,
+    name: "Naom Omare",
+    title: "Secretary",
+    phone: "+254751161828",
+    whatsapp: "254751161828",
+    initials: "NO",
+    description: "Administrative support and communication"
+  },
+  {
     id: 3,
+    name: "Bancy Nasiro",
+    title: "Member",
+    phone: "+254768202589",
+    whatsapp: "254768202589",
+    initials: "BN",
+    description: "Community support and member assistance"
+  },
+  {
+    id: 4,
     name: "Brian Chege",
     title: "Member",
     phone: "+254796693660",
@@ -42,22 +51,13 @@ const officials: Official[] = [
     description: "Member support and community outreach"
   },
   {
-    id: 4,
+    id: 5,
     name: "Katrina Nelima",
     title: "Member",
     phone: "+254794936760",
     whatsapp: "254794936760",
     initials: "KN",
     description: "Student welfare and assistance"
-  },
-  {
-    id: 5,
-    name: "Naom Omare",
-    title: "Secretary",
-    phone: "+254751161828",
-    whatsapp: "254751161828",
-    initials: "NO",
-    description: "Administrative support and communication"
   }
 ];
 
