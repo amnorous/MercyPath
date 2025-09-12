@@ -66,7 +66,7 @@ export default function BibleVerseSection() {
               <Button 
                 onClick={loadNewVerse}
                 disabled={isLoading}
-                className="mt-8 bg-chart-2 hover:bg-chart-2/90 text-white"
+                className="mt-8 bg-primary hover:bg-chart-2 text-white border border-primary hover:border-chart-2"
                 data-testid="button-new-verse"
               >
                 <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />

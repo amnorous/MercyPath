@@ -217,7 +217,7 @@ export default function SupportUsSection() {
                   <Button
                     onClick={handleMpesaPayment}
                     disabled={isProcessing || !amount || !phoneNumber}
-                    className="w-full bg-chart-2 hover:bg-chart-2/90 text-white text-lg py-6"
+                    className="w-full bg-primary hover:bg-chart-2 text-white text-lg py-6 border border-primary hover:border-chart-2"
                     data-testid="button-mpesa-pay"
                   >
                     {isProcessing ? (

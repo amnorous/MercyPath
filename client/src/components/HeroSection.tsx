@@ -69,7 +69,7 @@ export default function HeroSection({ onSupportClick, onAssistanceClick }: HeroS
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
           <Button 
             size="lg" 
-            className="bg-chart-2 hover:bg-chart-2/90 text-white px-8 py-4 text-lg font-semibold border-2 border-chart-2 transform transition-all duration-300 hover:scale-105 animate-slide-up"
+            className="bg-primary hover:bg-chart-2 text-white px-8 py-4 text-lg font-semibold border-2 border-primary hover:border-chart-2 transform transition-all duration-300 hover:scale-105 animate-slide-up"
             onClick={onSupportClick}
             data-testid="button-support"
           >

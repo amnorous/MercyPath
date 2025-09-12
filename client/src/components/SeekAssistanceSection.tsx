@@ -111,7 +111,7 @@ export default function SeekAssistanceSection() {
               <CardContent className="space-y-3">
                 <Button
                   onClick={() => handleCall(official.phone, official.name)}
-                  className="w-full bg-chart-2 hover:bg-chart-2/90 text-white"
+                  className="w-full bg-primary hover:bg-chart-2 text-white border border-primary hover:border-chart-2"
                   data-testid={`button-call-${official.id}`}
                 >
                   <Phone className="w-4 h-4 mr-2" />

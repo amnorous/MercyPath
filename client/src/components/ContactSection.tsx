@@ -82,7 +82,7 @@ export default function ContactSection() {
                 console.log('Opening MSCU Linktree');
               }}
               size="lg"
-              className="bg-chart-2 hover:bg-chart-2/90 text-white px-8 py-4 text-lg"
+              className="bg-primary hover:bg-chart-2 text-white px-8 py-4 text-lg border border-primary hover:border-chart-2"
               data-testid="button-linktree"
             >
               <ExternalLink className="w-5 h-5 mr-2" />
