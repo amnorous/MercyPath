@@ -39,7 +39,7 @@ export default function BibleVerseSection() {
         </div>
 
         {currentVerse && (
-          <Card className="bg-card border-2 border-primary/20 shadow-lg">
+          <Card className="bg-card border-2 border-primary/20 shadow-lg card-hover animate-floating">
             <CardContent className="p-8 md:p-12 text-center space-y-6">
               <div className={`transition-all duration-500 ${isLoading ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
                 <blockquote className="text-xl md:text-2xl font-serif text-foreground leading-relaxed mb-6 italic">

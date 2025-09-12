@@ -4,7 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { CreditCard, Smartphone, Copy, CheckCircle, Loader2 } from "lucide-react";
+import { CreditCard, Smartphone, Copy, CheckCircle, Loader2, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 export default function SupportUsSection() {
@@ -15,9 +15,9 @@ export default function SupportUsSection() {
   const { toast } = useToast();
 
   const paybillDetails = {
-    paybillNumber: "247247",
-    accountNumber: "COMPASSION2024",
-    businessName: "Medical Christian Union"
+    paybillNumber: "4109183",
+    accountNumber: "COMPASSION",
+    businessName: "Medical School Christian Union (MSCU)"
   };
 
   const copyToClipboard = async (text: string, field: string) => {
@@ -88,7 +88,7 @@ export default function SupportUsSection() {
           </p>
         </div>
 
-        <Card className="bg-card shadow-lg">
+        <Card className="bg-card shadow-lg card-hover">
           <CardHeader>
             <CardTitle className="text-2xl text-center text-foreground">Choose Your Payment Method</CardTitle>
           </CardHeader>
@@ -104,6 +104,17 @@ export default function SupportUsSection() {
                   <CreditCard className="w-12 h-12 text-primary mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-foreground mb-2">Manual M-Pesa Payment</h3>
                   <p className="text-muted-foreground">Use these details to send money via M-Pesa</p>
+                </div>
+
+                <div className="bg-blue-50 dark:bg-blue-950/20 rounded-lg p-4 mb-6">
+                  <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
+                    <MapPin className="w-4 h-4" />
+                    Physical Contributions
+                  </h4>
+                  <p className="text-muted-foreground text-sm">
+                    <strong>Location:</strong> Medical School Christian Union Office<br/>
+                    <em>Please contact us for specific drop-off details and times</em>
+                  </p>
                 </div>
 
                 <div className="space-y-4">

@@ -13,43 +13,51 @@ interface Official {
   description: string;
 }
 
-//todo: remove mock functionality - replace with real official data
 const officials: Official[] = [
   {
     id: 1,
-    name: "Rev. Sarah Mwangi",
-    title: "Chaplain & Counselor",
-    phone: "+254712345678",
-    whatsapp: "254712345678",
-    initials: "SM",
-    description: "Spiritual guidance and pastoral care"
+    name: "Bancy Nasiro",
+    title: "Member",
+    phone: "+254768202589",
+    whatsapp: "254768202589",
+    initials: "BN",
+    description: "Community support and member assistance"
   },
   {
     id: 2,
-    name: "Dr. James Kimani",
-    title: "Medical Assistance Coordinator",
-    phone: "+254723456789",
-    whatsapp: "254723456789",
-    initials: "JK",
-    description: "Medical support and healthcare guidance"
+    name: "Brenda Wanyama",
+    title: "Chairperson",
+    phone: "+254745730449",
+    whatsapp: "254745730449",
+    initials: "BW",
+    description: "Leadership and organizational guidance"
   },
   {
     id: 3,
-    name: "Grace Njeri",
-    title: "Student Welfare Officer",
-    phone: "+254734567890",
-    whatsapp: "254734567890",
-    initials: "GN",
-    description: "Academic and personal support for students"
+    name: "Brian Chege",
+    title: "Member",
+    phone: "+254796693660",
+    whatsapp: "254796693660",
+    initials: "BC",
+    description: "Member support and community outreach"
   },
   {
     id: 4,
-    name: "Prof. David Ochieng",
-    title: "Crisis Intervention Specialist",
-    phone: "+254745678901",
-    whatsapp: "254745678901",
-    initials: "DO",
-    description: "Emergency support and crisis counseling"
+    name: "Katrina Nelima",
+    title: "Member",
+    phone: "+254794936760",
+    whatsapp: "254794936760",
+    initials: "KN",
+    description: "Student welfare and assistance"
+  },
+  {
+    id: 5,
+    name: "Naom Omare",
+    title: "Secretary",
+    phone: "+254751161828",
+    whatsapp: "254751161828",
+    initials: "NO",
+    description: "Administrative support and communication"
   }
 ];
 
@@ -77,13 +85,13 @@ export default function SeekAssistanceSection() {
             Seek Assistance
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Don't face your challenges alone. Our dedicated team is here to provide support, guidance, and assistance when you need it most.
+            Don't face your challenges alone. Our dedicated Medical School Christian Union team is here to provide support, guidance, and assistance when you need it most.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mb-12">
           {officials.map((official) => (
-            <Card key={official.id} className="bg-card border-2 border-border hover-elevate">
+            <Card key={official.id} className="bg-card border-2 border-border card-hover">
               <CardHeader className="text-center">
                 <Avatar className="w-20 h-20 mx-auto mb-4">
                   <AvatarFallback className="bg-primary text-primary-foreground text-lg font-semibold">
@@ -133,7 +141,7 @@ export default function SeekAssistanceSection() {
               Join Our Community
             </h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Connect with fellow members of the Medical Christian Union community. 
+              Connect with fellow members of the Medical School Christian Union community. 
               Share experiences, find support, and stay updated on our compassion initiatives.
             </p>
             <Button

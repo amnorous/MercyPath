@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Mail, MapPin, Globe, MessageCircle, Heart } from "lucide-react";
+import { Mail, MapPin, Globe, MessageCircle, Heart, ExternalLink } from "lucide-react";
 
 export default function ContactSection() {
   const contactInfo = [
@@ -13,14 +13,14 @@ export default function ContactSection() {
     {
       icon: MapPin,
       label: "Location",
-      value: "University of Nairobi, School of Medicine",
-      action: () => console.log("Opening location")
+      value: "PR23+VRH Nairobi (-1.2978120, 36.8046173)",
+      action: () => window.open("https://maps.google.com/?q=-1.2978120,36.8046173", '_blank')
     },
     {
-      icon: Globe,
-      label: "Website",
-      value: "www.medicalcu.org",
-      action: () => window.open("https://www.medicalcu.org", '_blank')
+      icon: ExternalLink,
+      label: "Linktree",
+      value: "linktr.ee/mscuon",
+      action: () => window.open("https://linktr.ee/mscuon", '_blank')
     }
   ];
 
@@ -43,7 +43,7 @@ export default function ContactSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {contactInfo.map((info, index) => (
-            <Card key={index} className="bg-card hover-elevate cursor-pointer" onClick={info.action}>
+            <Card key={index} className="bg-card card-hover cursor-pointer" onClick={info.action}>
               <CardContent className="p-6 text-center space-y-4">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
                   <info.icon className="w-6 h-6 text-primary" />
@@ -62,34 +62,34 @@ export default function ContactSection() {
         </div>
 
         {/* Main WhatsApp CTA */}
-        <Card className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950/20 dark:to-emerald-950/20 border-2 border-green-200 dark:border-green-800">
+        <Card className="bg-gradient-to-r from-primary/5 to-chart-2/5 border-2 border-primary/20">
           <CardContent className="p-8 text-center">
             <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center">
-                <MessageCircle className="w-8 h-8 text-green-600 dark:text-green-400" />
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+                <ExternalLink className="w-8 h-8 text-primary" />
               </div>
             </div>
             <h3 className="text-2xl font-bold text-foreground mb-4">
-              Connect with Our Community
+              Explore Our Links
             </h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Join our WhatsApp group to stay connected with the Medical Christian Union community, 
-              receive updates on compassion initiatives, and find support from fellow members.
+              Discover all our resources, social media, and community links in one convenient place. 
+              Stay connected with the Medical School Christian Union community.
             </p>
             <Button
               onClick={() => {
-                window.open('https://chat.whatsapp.com/medical-christian-union', '_blank');
-                console.log('Opening main WhatsApp group');
+                window.open('https://linktr.ee/mscuon', '_blank');
+                console.log('Opening MSCU Linktree');
               }}
               size="lg"
-              className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 text-lg"
-              data-testid="button-main-whatsapp"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg"
+              data-testid="button-linktree"
             >
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Join Our WhatsApp Community
+              <ExternalLink className="w-5 h-5 mr-2" />
+              Visit Our Linktree
             </Button>
             <p className="text-sm text-muted-foreground mt-4">
-              Over 200+ active members sharing in compassion and support
+              All our community resources in one place
             </p>
           </CardContent>
         </Card>
@@ -98,10 +98,10 @@ export default function ContactSection() {
         <div className="text-center mt-12 pt-8 border-t border-border">
           <div className="flex items-center justify-center gap-2 mb-4">
             <Heart className="w-5 h-5 text-primary" />
-            <span className="text-lg font-semibold text-foreground">Medical Christian Union</span>
+            <span className="text-lg font-semibold text-foreground">Medical School Christian Union (MSCU)</span>
           </div>
           <p className="text-muted-foreground">
-            Reconciled to God, Ambassadors for Christ
+            We Are Family
           </p>
           <p className="text-sm text-muted-foreground mt-2">
             Compassion Week: September 8-14, 2024

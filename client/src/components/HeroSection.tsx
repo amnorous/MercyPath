@@ -28,18 +28,18 @@ export default function HeroSection({ onSupportClick, onAssistanceClick }: HeroS
       {/* Content */}
       <div className="relative z-20 max-w-4xl mx-auto px-6 space-y-8">
         {/* Logo/Badge */}
-        <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3">
-          <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-            <Heart className="w-6 h-6 text-primary" />
+        <div className="inline-flex items-center gap-3 bg-chart-2/20 backdrop-blur-sm border border-chart-2/40 rounded-full px-6 py-3">
+          <div className="w-12 h-12 bg-chart-2 rounded-full flex items-center justify-center">
+            <Heart className="w-6 h-6 text-white" />
           </div>
           <span className="text-sm font-medium tracking-wide">MEDICAL SCHOOL CHRISTIAN UNION</span>
         </div>
         
         {/* Main Heading */}
         <div className="space-y-4">
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-            COMPASSION
-            <span className="block text-primary">WEEK</span>
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight animate-fade-in">
+            <span className="animate-pulse">COMPASSION</span>
+            <span className="block text-primary animate-bounce delay-500">WEEK</span>
           </h1>
           <div className="bg-white rounded-full px-8 py-4 inline-block">
             <p className="text-chart-1 text-xl md:text-2xl font-semibold">
@@ -49,7 +49,7 @@ export default function HeroSection({ onSupportClick, onAssistanceClick }: HeroS
         </div>
         
         {/* Date Range */}
-        <div className="bg-chart-1/90 backdrop-blur-sm rounded-2xl px-8 py-4 inline-block border border-white/20">
+        <div className="bg-chart-2/90 backdrop-blur-sm rounded-2xl px-8 py-4 inline-block border border-white/20">
           <p className="text-lg md:text-xl font-semibold">
             FROM: MONDAY, SEP 8 TO: SUNDAY, SEP 14
           </p>
@@ -69,7 +69,7 @@ export default function HeroSection({ onSupportClick, onAssistanceClick }: HeroS
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
           <Button 
             size="lg" 
-            className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold border-2 border-primary"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold border-2 border-primary transform transition-all duration-300 hover:scale-105 animate-slide-up"
             onClick={onSupportClick}
             data-testid="button-support"
           >
@@ -79,7 +79,7 @@ export default function HeroSection({ onSupportClick, onAssistanceClick }: HeroS
           <Button 
             variant="outline" 
             size="lg"
-            className="bg-white/10 hover:bg-white/20 text-white border-2 border-white backdrop-blur-sm px-8 py-4 text-lg font-semibold"
+            className="bg-white/10 hover:bg-white/20 text-white border-2 border-white backdrop-blur-sm px-8 py-4 text-lg font-semibold transform transition-all duration-300 hover:scale-105 animate-slide-up delay-200"
             onClick={onAssistanceClick}
             data-testid="button-assistance"
           >
