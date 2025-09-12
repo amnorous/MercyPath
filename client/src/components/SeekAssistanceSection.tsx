@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Phone, MessageCircle, Heart, Users } from "lucide-react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Phone, MessageCircle, Heart } from "lucide-react";
 
 interface Official {
   id: number;
@@ -11,6 +11,7 @@ interface Official {
   whatsapp: string;
   initials: string;
   description: string;
+  image?: string; // optional
 }
 
 const officials: Official[] = [
@@ -21,7 +22,8 @@ const officials: Official[] = [
     phone: "+254745730449",
     whatsapp: "254745730449",
     initials: "BW",
-    description: "-"
+    description: "-",
+    image: "/images/Brenda.jpg",
   },
   {
     id: 2,
@@ -30,7 +32,8 @@ const officials: Official[] = [
     phone: "+254751161828",
     whatsapp: "254751161828",
     initials: "NO",
-    description: "-"
+    description: "As a member of the compassion subcommittee, I'm passionate about proactively reaching out to those in need and providing timely support to make a meaningful difference in their lives.",
+    image: "/images/Naom.jpg",
   },
   {
     id: 3,
@@ -39,7 +42,8 @@ const officials: Official[] = [
     phone: "+254768202589",
     whatsapp: "254768202589",
     initials: "BN",
-    description: "-"
+    description: "-",
+    image: "/images/Bancy.jpg",
   },
   {
     id: 4,
@@ -48,7 +52,8 @@ const officials: Official[] = [
     phone: "+254796693660",
     whatsapp: "254796693660",
     initials: "BC",
-    description: "-"
+    description: "-",
+    image: "/images/Chege.png",
   },
   {
     id: 5,
@@ -57,25 +62,27 @@ const officials: Official[] = [
     phone: "+254794936760",
     whatsapp: "254794936760",
     initials: "KN",
-    description: "-"
-  }
+    description: "-",
+    image: "/images/Katrina.jpg",
+  },
 ];
 
 export default function SeekAssistanceSection() {
-  const handleCall = (phone: string, name: string) => {
-    window.open(`tel:${phone}`, '_self');
-    console.log(`Calling ${name} at ${phone}`);
+  const handleCall = (phone: string) => {
+    window.open(`tel:${phone}`, "_self");
   };
 
   const handleWhatsApp = (whatsapp: string, name: string) => {
-    const message = encodeURIComponent(`Hello ${name}, I am reaching out for assistance through the Compassion Week initiative. Could you please help me?`);
-    window.open(`https://wa.me/${whatsapp}?text=${message}`, '_blank');
-    console.log(`Opening WhatsApp chat with ${name}`);
+    const message = encodeURIComponent(
+      `Hello ${name}, I am reaching out for assistance through the Compassion Week initiative. Could you please help me?`
+    );
+    window.open(`https://wa.me/${whatsapp}?text=${message}`, "_blank");
   };
 
   return (
     <section id="assistance" className="py-16 bg-background">
       <div className="container mx-auto px-6 max-w-6xl">
+        {/* Header */}
         <div className="text-center space-y-4 mb-12">
           <div className="inline-flex items-center gap-2 bg-chart-2/20 text-chart-2 px-4 py-2 rounded-full text-sm font-medium border border-chart-2/30">
             <Heart className="w-4 h-4" />
@@ -89,48 +96,42 @@ export default function SeekAssistanceSection() {
           </p>
         </div>
 
+        {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mb-12">
           {officials.map((official) => (
             <Card key={official.id} className="bg-card border-2 border-border card-hover">
               <CardHeader className="text-center">
                 <Avatar className="w-20 h-20 mx-auto mb-4">
+                  {/* Always include fallback for initials */}
+                  {official.image && <AvatarImage src={official.image} alt={official.name} />}
                   <AvatarFallback className="bg-chart-2 text-white text-lg font-semibold">
                     {official.initials}
                   </AvatarFallback>
                 </Avatar>
-                <CardTitle className="text-xl text-foreground" data-testid={`text-official-name-${official.id}`}>
-                  {official.name}
-                </CardTitle>
-                <p className="text-chart-2 font-medium" data-testid={`text-official-title-${official.id}`}>
-                  {official.title}
-                </p>
-                <p className="text-muted-foreground text-sm" data-testid={`text-official-description-${official.id}`}>
-                  {official.description}
-                </p>
+                <CardTitle className="text-xl text-foreground">{official.name}</CardTitle>
+                <p className="text-chart-2 font-medium">{official.title}</p>
+                <p className="text-muted-foreground text-sm">{official.description}</p>
               </CardHeader>
               <CardContent className="space-y-3">
                 <Button
-                  onClick={() => handleCall(official.phone, official.name)}
+                  onClick={() => handleCall(official.phone)}
                   className="w-full bg-primary hover:bg-chart-2 text-white border border-primary hover:border-chart-2"
-                  data-testid={`button-call-${official.id}`}
                 >
                   <Phone className="w-4 h-4 mr-2" />
-                  Call {official.name.split(' ')[0]}
+                  Call {official.name.split(" ")[0]}
                 </Button>
                 <Button
                   onClick={() => handleWhatsApp(official.whatsapp, official.name)}
                   variant="outline"
                   className="w-full border-2 border-green-500 text-green-600 hover:bg-green-50 dark:hover:bg-green-950"
-                  data-testid={`button-whatsapp-${official.id}`}
                 >
                   <MessageCircle className="w-4 h-4 mr-2" />
-                  WhatsApp {official.name.split(' ')[0]}
+                  WhatsApp {official.name.split(" ")[0]}
                 </Button>
               </CardContent>
             </Card>
           ))}
         </div>
-
       </div>
     </section>
   );

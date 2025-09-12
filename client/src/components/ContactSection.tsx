@@ -7,8 +7,8 @@ export default function ContactSection() {
     {
       icon: Mail,
       label: "Email",
-      value: "compassion@medicalcu.org",
-      action: () => window.open("mailto:compassion@medicalcu.org", '_self')
+      value: "mscuexec2022@gmail.com",
+      action: () => window.open("mailto:mscuexec2022@gmail.com", '_self')
     },
     {
       icon: MapPin,
