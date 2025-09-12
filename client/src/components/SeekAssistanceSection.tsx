@@ -63,7 +63,7 @@ const officials: Official[] = [
     whatsapp: "254794936760",
     initials: "KN",
     description: "-",
-    image: "/images/Katrina.jpg",
+    image: "/images/Katrina.png",
   },
 ];
 
