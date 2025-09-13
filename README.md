@@ -1,6 +1,4 @@
-Here’s a clean, professional **README.md** for your project — written fully in Markdown and tailored for *MercyPath*.
 
-````markdown
 # MercyPath 🌍✝️  
 
 A website for the **UON Medical School Christian Union** designed to spread compassion, share resources, and allow supporters to give easily.  
