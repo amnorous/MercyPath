@@ -59,7 +59,7 @@ export default function HeroSection({ onSupportClick, onAssistanceClick }: HeroS
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight animate-fade-in">
             <span className="animate-pulse">COMPASSION</span>
             <span className="block text-chart-2 animate-bounce delay-500">
-              WEEK
+              MINISTRY
             </span>
           </h1>
           <div className="bg-white rounded-full px-8 py-4 inline-block">
@@ -72,7 +72,7 @@ export default function HeroSection({ onSupportClick, onAssistanceClick }: HeroS
         {/* Date Range */}
         <div className="bg-chart-2/90 backdrop-blur-sm rounded-2xl px-8 py-4 inline-block border border-white/20">
           <p className="text-lg md:text-xl font-semibold">
-            FROM: MONDAY, SEP 8 TO: SUNDAY, SEP 14
+            Reconciled to God, Ambassadors for Christ
           </p>
         </div>
 
@@ -82,7 +82,7 @@ export default function HeroSection({ onSupportClick, onAssistanceClick }: HeroS
             "Kindness is contagious"
           </p>
           <p className="text-base md:text-lg opacity-90">
-            Reconciled to God, Ambassadors for Christ
+            
           </p>
         </div>
 
